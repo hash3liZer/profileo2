@@ -30,6 +30,6 @@ export default function HomePage() {
 
 export async function getStaticProps() {
   return {
-    props: { title: 'Home' },
+    props: { title: 'Shameer Kashif' },
   };
 }

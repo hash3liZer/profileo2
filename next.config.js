@@ -6,5 +6,7 @@ module.exports = {
       'imgur.com',
     ],
   },
+  output: "export",
   distDir: 'build',
+  reactStrictMode: true,
 };
