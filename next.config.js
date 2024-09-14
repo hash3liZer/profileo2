@@ -9,4 +9,5 @@ module.exports = {
   output: "export",
   distDir: 'build',
   reactStrictMode: true,
+  basePath: '/'
 };
