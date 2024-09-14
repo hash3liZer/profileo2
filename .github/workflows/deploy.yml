@@ -66,6 +66,7 @@ jobs:
         run: |
           echo "GITHUB_TOKEN=${{ secrets.PROFILEO2_PUBLIC_TOKEN }}" > .env
           echo "NEXT_PUBLIC_GITHUB_USERNAME=${{ github.repository_owner }}" >> .env
+          cat .env
           ${{ steps.detect-package-manager.outputs.manager }} run build
 
       # - name: Upload artifact
