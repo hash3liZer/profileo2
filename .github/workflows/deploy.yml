@@ -67,6 +67,7 @@ jobs:
           echo "GITHUB_API_KEY = ${{ secrets.PROFILEO2_PUBLIC_TOKEN }}" > .env
           echo "NEXT_PUBLIC_GITHUB_USERNAME = ${{ github.repository_owner }}" >> .env
           ${{ steps.detect-package-manager.outputs.runner }} next build
+          touch ./build/.nojekyll
 
       # - name: Upload artifact
       #   uses: actions/upload-pages-artifact@v3
