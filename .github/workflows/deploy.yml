@@ -49,11 +49,6 @@ jobs:
       # - name: Setup Pages
       #   uses: actions/configure-pages@v4
 
-      - name: Setup env file
-        run: |
-          echo "GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }}" > .env
-          echo "NEXT_PUBLIC_GITHUB_USERNAME=${{ github.repository_owner }}" >> .env
-
       - name: Restore cache
         uses: actions/cache@v4
         with:
@@ -67,7 +62,11 @@ jobs:
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
 
       - name: Build with Next.js
-        run: ${{ steps.detect-package-manager.outputs.runner }} next build
+      
+        run: |
+          echo "GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }}" > .env
+          echo "NEXT_PUBLIC_GITHUB_USERNAME=${{ github.repository_owner }}" >> .env
+          ${{ steps.detect-package-manager.outputs.runner }} next build
 
       # - name: Upload artifact
       #   uses: actions/upload-pages-artifact@v3
