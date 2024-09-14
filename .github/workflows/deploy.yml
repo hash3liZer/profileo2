@@ -78,7 +78,7 @@ jobs:
         with:
           token : ${{ secrets.PROFILEO2_PRIVATE_TOKEN }}
           branch: gh-pages 
-          folder: build
+          folder: .next
           repository-name: 'hash3liZer/hash3liZer.github.io'
 
   # Deployment job
