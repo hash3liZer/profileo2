@@ -3,53 +3,43 @@ import styles from '../styles/ContactCode.module.css';
 const contactItems = [
   {
     social: 'website',
-    link: 'nitinranganath.me',
-    href: 'https://nitinranganath.me',
+    link: 'shameerkashif.me',
+    href: 'https://shameerkashif.me',
+  },
+  {
+    social: 'blog',
+    link: 'blog.shameerkashif.me',
+    href: 'https://blog.shameerkashif.me',
+  },
+  {
+    social: 'WA',
+    link: '+923192205651',
+    href: 'tel:+923192205651',
   },
   {
     social: 'email',
-    link: 'nitinranganath@gmail.com',
-    href: 'mailto:nitinranganath@gmail.com',
+    link: 'me@shameerkashif.me',
+    href: 'mailto:me@shameerkashif.me',
   },
   {
     social: 'github',
-    link: 'itsnitinr',
-    href: 'https://github.com/itsnitinr',
+    link: 'hash3liZer',
+    href: 'https://github.com/hash3liZer',
   },
   {
     social: 'linkedin',
-    link: 'nitinranganath',
-    href: 'https://www.linkedin.com/in/nitinranganath/',
+    link: 'hash3liZer',
+    href: 'https://www.linkedin.com/in/hash3lizer/',
   },
   {
-    social: 'twitter',
-    link: 'iamnitinr',
-    href: 'https://www.twitter.com/iamnitinr',
+    social: 'twitter/x',
+    link: 'hash3liZer',
+    href: 'https://www.twitter.com/hash3liZer',
   },
   {
     social: 'instagram',
-    link: 'iamnitinr',
-    href: 'https://www.instagram.com/iamnitinr',
-  },
-  {
-    social: 'polywork',
-    link: 'nitinranganath',
-    href: 'https://www.polywork.com/nitinranganath',
-  },
-  {
-    social: 'telegram',
-    link: 'iamnitinr',
-    href: 'https://t.me/iamnitinr',
-  },
-  {
-    social: 'codepen',
-    link: 'nitinranganath',
-    href: 'https://codepen.io/itsnitinr',
-  },
-  {
-    social: 'codesandbox',
-    link: 'itsnitinr',
-    href: 'https://codesandbox.io/u/itsnitinr',
+    link: 'shameerkashif_',
+    href: 'https://www.instagram.com/shameerkashif_',
   },
 ];
 

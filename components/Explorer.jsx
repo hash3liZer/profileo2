@@ -12,7 +12,7 @@ const explorerItems = [
   },
   {
     name: 'about.html',
-    path: '/about',
+    path: 'https://blog.shameerkashif.me/resume',
     icon: 'html_icon.svg',
   },
   {
@@ -20,14 +20,14 @@ const explorerItems = [
     path: '/contact',
     icon: 'css_icon.svg',
   },
-  {
-    name: 'projects.js',
-    path: '/projects',
-    icon: 'js_icon.svg',
-  },
+  // {
+  //   name: 'projects.js',
+  //   path: '/projects',
+  //   icon: 'js_icon.svg',
+  // },
   {
     name: 'articles.json',
-    path: '/articles',
+    path: 'https://blog.shameerkashif.me',
     icon: 'json_icon.svg',
   },
   {

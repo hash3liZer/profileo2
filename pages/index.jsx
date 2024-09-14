@@ -7,14 +7,14 @@ export default function HomePage() {
     <>
       <div className={styles.container}>
         <div className={styles.background}>
-          <h1>I BUILD</h1>
-          <h1>WEBSITES</h1>
+          <h1>BREAKING</h1>
+          <h1>CODE</h1>
         </div>
         <div className={styles.foreground}>
           <div className={styles.content}>
-            <h1 className={styles.name}>Nitin Ranganath</h1>
-            <h6 className={styles.bio}>Full Stack Web Developer</h6>
-            <Link href="/projects">
+            <h1 className={styles.name}>Shameer Kashif | hash3liZer</h1>
+            <h6 className={styles.bio}>0xFF | cat :flag_pk:</h6>
+            <Link href="/github">
               <button className={styles.button}>View Work</button>
             </Link>
             <Link href="/contact">

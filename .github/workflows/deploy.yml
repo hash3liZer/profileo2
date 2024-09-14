@@ -1,0 +1,39 @@
+name: Build and Deploy
+env:
+  CI: false
+  GITHUB_USERNAME: ${{ github.repository_owner }}
+  REACT_APP_GITHUB_TOKEN: ${{ secrets.PROFILEO2_PRIVATE_TOKEN }} # This is automatically set by Github Actions
+  USE_GITHUB_DATA: "true"
+  #MEDIUM_USERNAME: "hash3liZer"
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+  schedule:
+    - cron: "30 3 * * *" # see https://docs.github.com/en/actions/reference/events-that-trigger-workflows#scheduled-events
+permissions:
+  contents: write
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v3
+        with:
+          persist-credentials: false
+
+      - name: Install and Build 🔧 # Build the Project
+        run: |
+          echo "GITHUB_API_KEY = ${{ secrets.PROFILEO2_PUBLIC_TOKEN }}" > .env
+          echo "NEXT_PUBLIC_GITHUB_USERNAME = ${{ github.repository_owner }}" >> .env
+          npm install
+          npm run build
+
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          token : ${{ secrets.PROFILEO2_PRIVATE_TOKEN }}
+          branch: gh-pages 
+          folder: build
+          repository-name: 'hash3liZer/hash3liZer.github.io'

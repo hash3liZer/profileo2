@@ -18,13 +18,13 @@ const sidebarTopItems = [
     Icon: GithubIcon,
     path: '/github',
   },
-  {
-    Icon: CodeIcon,
-    path: '/projects',
-  },
+  // {
+  //   Icon: CodeIcon,
+  //   path: '/projects',
+  // },
   {
     Icon: PencilIcon,
-    path: '/articles',
+    path: 'https://blog.shameerkashif.me',
   },
   {
     Icon: MailIcon,
@@ -35,7 +35,7 @@ const sidebarTopItems = [
 const sidebarBottomItems = [
   {
     Icon: AccountIcon,
-    path: '/about',
+    path: 'https://blog.shameerkashif.me/resume',
   },
   {
     Icon: SettingsIcon,
