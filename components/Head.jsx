@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Script from 'next/script';
 
 const CustomHead = ({ title }) => {
   return (
@@ -21,13 +22,15 @@ const CustomHead = ({ title }) => {
       <meta property="og:url" content="https://vscode-portfolio.vercel.app" />
       <meta name="twitter:card" content="summary_large_image" />
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-GLL1KK0TWH"></script>
-      <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
 
-        gtag('config', 'G-GLL1KK0TWH');
-      </script>
+          gtag('config', 'G-GLL1KK0TWH');
+        `}
+      </Script>
     </Head>
   );
 };
