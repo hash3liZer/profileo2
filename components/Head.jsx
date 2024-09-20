@@ -7,19 +7,20 @@ const CustomHead = ({ title }) => {
       <title>{title}</title>
       <meta
         name="description"
-        content="Nitin Ranganath is an avid full stack web developer building websites and applications you'd love to use"
+        content="My name is Shameer Kashif aka hash3liZer. I do Cyber Security, break things, play CTFs. I am more into Web & Binary Exploitation"
       />
       <meta
         name="keywords"
-        content="nitin ranganath, nitin, ranganath, web developer portfolio, nitin web developer, nitin developer, mern stack, nitin ranganath portfolio, vscode-portfolio"
+        content="Shameer, Shameer Kashif, hash3liZer, portfolio, cyber security, ctfs, web exploitation, binary exploitation"
       />
-      <meta property="og:title" content="Nitin Ranganath's Portfolio" />
+      <meta property="og:title" content="Shameer Kashif | hash3liZer" />
       <meta
         property="og:description"
-        content="A full-stack developer building websites that you'd like to use."
+        content="My name is Shameer Kashif aka hash3liZer. I do Cyber Security, break things, play CTFs. I am more into Web & Binary Exploitation"
       />
-      <meta property="og:image" content="https://imgur.com/4zi5KkQ.png" />
-      <meta property="og:url" content="https://vscode-portfolio.vercel.app" />
+      
+      <meta property="og:image" content="https://github.com/user-attachments/assets/6d314326-0216-43ee-9162-fb8a1b8c3029" />
+      <meta property="og:url" content="https://shameerkashif.me" />
       <meta name="twitter:card" content="summary_large_image" />
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-GLL1KK0TWH"></script>
       <Script id="google-analytics" strategy="afterInteractive">
@@ -38,5 +39,5 @@ const CustomHead = ({ title }) => {
 export default CustomHead;
 
 CustomHead.defaultProps = {
-  title: 'Nitin Ranganath',
+  title: 'Shameer Kashif',
 };
