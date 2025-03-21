@@ -12,11 +12,6 @@ const contactItems = [
     href: 'https://blog.shameerkashif.me',
   },
   {
-    social: 'WA',
-    link: '+923192205651',
-    href: 'tel:+923192205651',
-  },
-  {
     social: 'email',
     link: 'me@shameerkashif.me',
     href: 'mailto:me@shameerkashif.me',
@@ -30,17 +25,7 @@ const contactItems = [
     social: 'linkedin',
     link: 'hash3liZer',
     href: 'https://www.linkedin.com/in/hash3lizer/',
-  },
-  {
-    social: 'twitter/x',
-    link: 'hash3liZer',
-    href: 'https://www.twitter.com/hash3liZer',
-  },
-  {
-    social: 'instagram',
-    link: 'shameerkashif_',
-    href: 'https://www.instagram.com/shameerkashif_',
-  },
+  }
 ];
 
 const ContactCode = () => {
