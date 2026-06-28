@@ -6,7 +6,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { nav, site, links } from '../lib/site';
 import styles from './Navbar.module.css';
 
-export default function Navbar({ avatar }) {
+export default function Navbar({ avatar = site.avatar }) {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
 
@@ -33,7 +33,7 @@ export default function Navbar({ avatar }) {
       className={`${styles.header} ${scrolled ? styles.scrolled : ''}`}
     >
       <nav className={`container ${styles.nav}`}>
-        <a href="#top" className={styles.brand} aria-label="Home">
+        <a href="/#top" className={styles.brand} aria-label="Home">
           {avatar ? (
             // eslint-disable-next-line @next/next/no-img-element
             <img

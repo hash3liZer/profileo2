@@ -20,9 +20,7 @@ export default function Footer() {
           <a href={links.linkedin} target="_blank" rel="noopener noreferrer">
             LinkedIn
           </a>
-          <a href={links.blog} target="_blank" rel="noopener noreferrer">
-            Blog
-          </a>
+          <a href={links.blog}>Blog</a>
           <a href="#top">Back to top ↑</a>
         </div>
       </div>

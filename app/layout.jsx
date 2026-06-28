@@ -31,7 +31,6 @@ export const metadata = {
     'OSCP',
     'portfolio',
   ],
-  alternates: { canonical: '/' },
   formatDetection: { telephone: false, address: false, email: false },
   robots: {
     index: true,
@@ -99,7 +98,7 @@ const jsonLd = {
       description: site.description,
       email: site.email,
       address: { '@type': 'PostalAddress', addressCountry: 'PK' },
-      sameAs: [links.github, links.linkedin, links.blog, links.website],
+      sameAs: [links.github, links.linkedin, links.website],
       knowsAbout: [
         'Web Exploitation',
         'Wireless Exploitation',

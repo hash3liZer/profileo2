@@ -69,9 +69,7 @@ export default function Hero() {
               LinkedIn
             </a>
             <span className={styles.sep} />
-            <a href={links.blog} target="_blank" rel="noopener noreferrer">
-              Blog
-            </a>
+            <a href={links.blog}>Blog</a>
           </motion.div>
         </motion.div>
 

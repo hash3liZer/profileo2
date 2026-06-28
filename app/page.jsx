@@ -7,6 +7,10 @@ import Contact from '../components/Contact';
 import Footer from '../components/Footer';
 import { getGitHubData } from '../lib/github';
 
+export const metadata = {
+  alternates: { canonical: '/' },
+};
+
 // Server Component — runs at build time during `next build` (static export),
 // so the GitHub data is baked into the exported HTML.
 export default async function Home() {

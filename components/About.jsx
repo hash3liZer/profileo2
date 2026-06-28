@@ -39,9 +39,7 @@ export default function About() {
                 In 2024 I won the Digital Pakistan Cyber Security Hackathon and
                 the Turkish COMSEC HackMaster. I write up the interesting work on
                 my{' '}
-                <a href={links.blog} target="_blank" rel="noopener noreferrer">
-                  blog
-                </a>
+                <a href={links.blog}>blog</a>
                 .
               </p>
             </Reveal>
