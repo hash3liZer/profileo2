@@ -1,0 +1,94 @@
+.window {
+  width: 100%;
+  max-width: 440px;
+  background: #080b0e;
+  border: 1px solid var(--line-strong);
+  border-radius: 10px;
+  overflow: hidden;
+  font-family: var(--font-mono);
+}
+
+.bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 14px;
+  background: var(--surface);
+  border-bottom: 1px solid var(--line);
+}
+
+.dot {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  display: inline-block;
+}
+.dot[data-c='r'] {
+  background: #ff5f56;
+}
+.dot[data-c='y'] {
+  background: #ffbd2e;
+}
+.dot[data-c='g'] {
+  background: #27c93f;
+}
+
+.title {
+  margin-left: auto;
+  font-size: 0.72rem;
+  color: var(--text-faint);
+  letter-spacing: 0.02em;
+}
+
+.body {
+  padding: 18px 18px 22px;
+  font-size: 0.86rem;
+  line-height: 1.85;
+}
+
+.line {
+  color: var(--text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.prompt {
+  color: var(--accent);
+}
+
+.path {
+  color: #6aa9ff;
+  margin-right: 6px;
+}
+
+.out {
+  color: var(--text-muted);
+  padding-left: 2px;
+}
+
+.typed {
+  color: var(--text);
+  min-height: 1.85em;
+}
+
+.arrow {
+  color: var(--accent);
+  margin-right: 6px;
+}
+
+.cursor {
+  display: inline-block;
+  width: 9px;
+  height: 1.05em;
+  background: var(--accent);
+  vertical-align: text-bottom;
+  margin-left: 3px;
+  animation: blink 1s steps(2, start) infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}

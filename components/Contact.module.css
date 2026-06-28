@@ -1,0 +1,84 @@
+.wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.big {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(2.3rem, 7vw, 5rem);
+  line-height: 1.04;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  max-width: 16ch;
+  margin: 16px 0 22px;
+  color: var(--text);
+}
+
+.sub {
+  max-width: 520px;
+  color: var(--text-muted);
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  margin-bottom: 34px;
+}
+
+.cta {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 56px;
+}
+
+.socials {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  width: 100%;
+}
+
+.social {
+  background: var(--surface);
+  border-radius: var(--radius-sm);
+  padding: 22px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  transition: background 0.2s var(--ease);
+}
+
+.social:hover {
+  background: var(--surface-2);
+}
+
+.socialLabel {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+}
+
+.socialValue {
+  color: var(--text);
+  font-size: 0.95rem;
+  transition: color 0.2s var(--ease);
+}
+
+.social:hover .socialValue {
+  color: var(--accent);
+}
+
+@media (max-width: 720px) {
+  .socials {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 400px) {
+  .socials {
+    grid-template-columns: 1fr;
+  }
+}

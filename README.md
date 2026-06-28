@@ -1,49 +1,65 @@
-# vscode-portfolio
-[![Open is Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/itsnitinr/vscode-portfolio)
+# shameerkashif.me
 
-A Visual Studio Code themed developer portfolio website built with Next.js and deployed on Vercel.
+The personal portfolio of **Shameer Kashif** ([hash3liZer](https://github.com/hash3liZer)), penetration tester and offensive security specialist. A sleek, dark, single page site with subtle 3D and motion.
 
-![vscode-portfolio banner](https://imgur.com/JXJ9mpO.gif)
+Built with **Next.js 15**, **React 19**, **react-three-fiber** + **drei** (light 3D hero), and **Framer Motion**. Statically exported and deployed to GitHub Pages.
 
-## Features Roadmap
+## Stack
 
-- [ ] Themes and customizations
-  - [x] GitHub Dark (default)
-  - [ ] One Dark Pro
-  - [x] Dracula
-  - [x] Ayu
-  - [x] Nord
-- [ ] Interactive custom terminal
+| | |
+|---|---|
+| Framework | Next.js 15 (App Router, `output: 'export'`) |
+| UI | React 19 |
+| 3D | three.js, @react-three/fiber, @react-three/drei |
+| Motion | Framer Motion |
+| Fonts | Space Grotesk, Inter, JetBrains Mono (`next/font`) |
+| Hosting | GitHub Pages (static) |
 
-For other features and themes suggestions, please open an issue.
+## Structure
 
-## Environment Variables
-
-For fetching your articles from dev.to, create an `.env.local` file inside the project directory. Check the `.env.local.example` file for more information.
-
-## Running Development Server
-
-```bash
-npm run dev
-# or
-yarn dev
+```
+app/
+  layout.jsx       root layout: fonts, metadata, analytics
+  page.jsx         single page, fetches GitHub data at build time
+  globals.css      design tokens and base styles
+components/
+  Navbar, Hero, About, Skills, Work, Contact, Footer
+  three/HeroCanvas.jsx   morphing wireframe 3D accent (react-three-fiber)
+  ui/Reveal.jsx          scroll reveal motion wrapper
+lib/
+  site.js          all editable content (name, links, skills, socials)
+  github.js        build-time GitHub fetch
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+To change content, edit **`lib/site.js`**. Sections live in `components/`.
 
-All VSCode related components can be found in the `components` folder. To change the content of the portfolio, check out the `pages` folder. To add or remove pages, modify `components/Sidebar.jsx` and `components/Tabsbar.jsx`.
+## Development
 
-## Next.js Resources
+```bash
+npm install
+npm run dev
+```
 
-To learn more about Next.js, take a look at the following resources:
+Open [http://localhost:3000](http://localhost:3000).
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Environment variables
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/)
+Optional. See `.env.local.example`, then copy it to `.env.local`:
 
-## Deploy on Vercel
+- `GITHUB_API_KEY`: a GitHub token (no scopes needed) to raise the build-time API rate limit. Without it, unauthenticated requests are used.
+- `NEXT_PUBLIC_GITHUB_USERNAME`: the GitHub account shown in the Work section.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Build and deploy
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+```bash
+npm run build   # produces ./out (static HTML)
+```
+
+Pushes to `main` trigger `.github/workflows/deploy.yml`, which builds the static
+site and publishes `out/` to the `gh-pages` branch of `hash3liZer/hash3liZer.github.io`.
+The workflow preserves the custom domain `CNAME` and adds `.nojekyll` so the
+`_next/` assets are served correctly.
+
+---
+
+Originally adapted from a VS Code themed template, fully redesigned in 2025.

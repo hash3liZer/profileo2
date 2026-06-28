@@ -1,0 +1,391 @@
+/* ---- Top bar ---- */
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(6, 8, 11, 0.85);
+  backdrop-filter: saturate(160%) blur(12px);
+  -webkit-backdrop-filter: saturate(160%) blur(12px);
+  border-bottom: 1px solid var(--line);
+}
+
+.topbarInner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+}
+
+.back {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: var(--text);
+}
+.back span {
+  color: var(--accent);
+  margin-right: 6px;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.backLink {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  transition: color 0.2s var(--ease);
+}
+.backLink:hover {
+  color: var(--text);
+}
+
+/* ---- Document ---- */
+.page {
+  padding-block: clamp(40px, 7vh, 80px) 60px;
+}
+
+.doc {
+  max-width: 940px;
+}
+
+.head {
+  margin-bottom: 34px;
+}
+
+.name {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(2.4rem, 6vw, 3.8rem);
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+  margin: 14px 0 10px;
+}
+
+.title {
+  color: var(--text-muted);
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  margin-bottom: 18px;
+}
+
+.contact {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 16px;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+.contact a {
+  color: var(--text-muted);
+  transition: color 0.2s var(--ease);
+}
+.contact a:hover {
+  color: var(--accent);
+}
+.contact li {
+  position: relative;
+  padding-right: 16px;
+}
+.contact li:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: var(--text-faint);
+  transform: translateY(-50%);
+}
+
+/* ---- Highlights ---- */
+.highlights {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-bottom: 40px;
+}
+.highlight {
+  background: var(--surface);
+  border-radius: var(--radius-sm);
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.hValue {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--accent);
+}
+.hLabel {
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  color: var(--text-muted);
+}
+
+/* ---- Blocks ---- */
+.block {
+  margin-bottom: 40px;
+}
+
+.sectionTitle {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.05rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--text);
+  padding-bottom: 12px;
+  margin-bottom: 22px;
+  border-bottom: 1px solid var(--line);
+}
+
+.summary {
+  font-size: clamp(1.02rem, 1.8vw, 1.2rem);
+  line-height: 1.65;
+  color: var(--text-muted);
+}
+
+/* ---- Experience ---- */
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.job,
+.entry {
+  background: var(--surface);
+  border-radius: var(--radius);
+  padding: 24px clamp(20px, 3vw, 28px);
+}
+
+.jobHead {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.jobRole {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.15rem;
+  color: var(--text);
+}
+
+.jobOrg {
+  font-size: 0.92rem;
+  color: var(--accent);
+  margin-top: 4px;
+}
+
+.dot {
+  display: inline-block;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: var(--text-faint);
+  vertical-align: middle;
+  margin: 0 4px;
+}
+
+.period {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--text-faint);
+  white-space: nowrap;
+}
+
+.jobSummary {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin: 14px 0 14px;
+}
+
+.bullets {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+.bullets li {
+  position: relative;
+  padding-left: 20px;
+  color: var(--text-muted);
+  font-size: 0.93rem;
+  line-height: 1.55;
+}
+.bullets li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.6em;
+  width: 6px;
+  height: 6px;
+  border-radius: 2px;
+  background: var(--accent);
+}
+
+.entryDetail {
+  color: var(--text-muted);
+  font-size: 0.93rem;
+  line-height: 1.6;
+  margin-top: 10px;
+}
+
+/* ---- Two column ---- */
+.twoCol {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 40px;
+}
+.twoCol .block {
+  margin-bottom: 0;
+}
+
+/* ---- Certs & awards ---- */
+.certs {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.cert {
+  background: var(--surface);
+  border-radius: var(--radius-sm);
+  padding: 14px 18px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: baseline;
+  gap: 12px;
+}
+.certName {
+  font-family: var(--font-display);
+  font-weight: 600;
+  color: var(--accent);
+  font-size: 0.92rem;
+  white-space: nowrap;
+}
+.certFull {
+  color: var(--text-muted);
+  font-size: 0.88rem;
+}
+.certYear {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--text-faint);
+}
+
+/* ---- Skills ---- */
+.skills {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+.skillGroup {
+  background: var(--surface);
+  border-radius: var(--radius);
+  padding: 22px 24px;
+}
+.skillTitle {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 14px;
+}
+.skillList {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 0;
+}
+.skillList li {
+  color: var(--text-muted);
+  font-size: 0.88rem;
+  padding-right: 12px;
+  position: relative;
+}
+.skillList li:not(:last-child)::after {
+  content: '·';
+  position: absolute;
+  right: 3px;
+  color: var(--text-faint);
+}
+
+@media (max-width: 720px) {
+  .twoCol,
+  .highlights,
+  .skills {
+    grid-template-columns: 1fr;
+  }
+  .highlights {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* ============================================================
+   Print — clean, light, one professional document
+   ============================================================ */
+@media print {
+  .topbar,
+  .actions {
+    display: none !important;
+  }
+  .page {
+    padding: 0 !important;
+  }
+  .doc {
+    max-width: 100%;
+  }
+  .name,
+  .jobRole,
+  .sectionTitle,
+  .skillTitle,
+  .hValue {
+    color: #0a0a0a !important;
+  }
+  .title,
+  .summary,
+  .jobSummary,
+  .bullets li,
+  .entryDetail,
+  .certFull,
+  .skillList li,
+  .contact,
+  .contact a {
+    color: #333 !important;
+  }
+  .jobOrg,
+  .certName,
+  .back span {
+    color: #0a7d3b !important;
+  }
+  .job,
+  .entry,
+  .cert,
+  .skillGroup,
+  .highlight {
+    background: #fff !important;
+    border: 1px solid #e2e2e2 !important;
+    break-inside: avoid;
+  }
+  .hValue {
+    color: #0a7d3b !important;
+  }
+  .bullets li::before {
+    background: #0a7d3b !important;
+  }
+  .sectionTitle {
+    border-bottom-color: #ccc !important;
+  }
+}

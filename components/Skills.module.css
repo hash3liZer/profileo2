@@ -1,0 +1,79 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.group {
+  background: var(--surface);
+  border-radius: var(--radius);
+  padding: 30px clamp(22px, 3vw, 36px);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  transition: background 0.2s var(--ease);
+}
+
+.group:hover {
+  background: var(--surface-2);
+}
+
+.groupHead {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+}
+
+.num {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--accent);
+}
+
+.groupTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+
+.item {
+  position: relative;
+  padding-left: 20px;
+  color: var(--text-muted);
+  font-size: 1rem;
+  transition: color 0.2s var(--ease);
+}
+
+.item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.62em;
+  width: 7px;
+  height: 7px;
+  border-radius: 2px;
+  background: var(--accent);
+  opacity: 0.7;
+  transition: opacity 0.2s var(--ease), transform 0.2s var(--ease);
+}
+
+.item:hover {
+  color: var(--text);
+}
+
+.item:hover::before {
+  opacity: 1;
+  transform: scale(1.15);
+}
+
+@media (max-width: 720px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

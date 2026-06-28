@@ -1,0 +1,139 @@
+.hero {
+  position: relative;
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding-block: 96px 64px;
+}
+
+.canvasWrap {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.inner {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: clamp(28px, 5vw, 64px);
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.eyebrow {
+  margin-bottom: 22px;
+}
+
+.title {
+  margin-bottom: 24px;
+}
+
+.lead {
+  max-width: 480px;
+  font-size: clamp(1.02rem, 1.9vw, 1.25rem);
+  color: var(--text-muted);
+  line-height: 1.55;
+  margin-bottom: 36px;
+}
+
+.cta {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 28px;
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.socials a {
+  transition: color 0.2s var(--ease);
+}
+.socials a:hover {
+  color: var(--accent);
+}
+
+.sep {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--text-faint);
+  display: inline-block;
+}
+
+.right {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.scroll {
+  position: absolute;
+  bottom: 26px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+}
+
+.scrollLine {
+  width: 2px;
+  height: 38px;
+  background: var(--accent);
+  transform-origin: top;
+  animation: drop 1.8s var(--ease) infinite;
+}
+
+@keyframes drop {
+  0% {
+    transform: scaleY(0);
+    transform-origin: top;
+  }
+  45% {
+    transform: scaleY(1);
+    transform-origin: top;
+  }
+  55% {
+    transform: scaleY(1);
+    transform-origin: bottom;
+  }
+  100% {
+    transform: scaleY(0);
+    transform-origin: bottom;
+  }
+}
+
+@media (max-width: 880px) {
+  .inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .right {
+    justify-content: flex-start;
+  }
+  .scroll {
+    display: none;
+  }
+}
